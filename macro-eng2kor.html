@@ -1,0 +1,124 @@
+<style>
+html, textarea {font-size:10pt;}
+input {padding:8px 18px; margin:4px 4px 4px 0px;}
+</style>
+<script>
+var data = [
+// *. 작업 스킬
+,{en:"Standard Synthesis", ko:"중급 작업"}
+,{en:"Careful Synthesis III", ko:"모범 작업 3"}
+,{en:"Careful Synthesis II", ko:"모범 작업 2"}
+,{en:"Careful Synthesis", ko:"모범 작업"}
+,{en:"Rapid Synthesis III", ko:"강행 작업 3"}
+,{en:"Rapid Synthesis II", ko:"강행 작업 2"}
+,{en:"Rapid Synthesis", ko:"강행 작업"}
+,{en:"Flawless Synthesis", ko:"견실한 작업"}
+,{en:"Piece by Piece", ko:"꾸준한 진척"}
+,{en:"Focused Synthesis", ko:"주시 작업"}
+,{en:"Intensive Synthesis", ko:"집중 작업"}
+,{en:"Brand of the Elements", ko:"원소의 인장"}
+,{en:"Name of the Elements", ko:"원소의 예술"}
+// *. 가공 스킬
+,{en:"Standard Touch", ko:"중급 가공"}
+,{en:"Advanced Touch", ko:"고급 가공"}
+,{en:"Hasty Touch II", ko:"성급한 손길"}
+,{en:"Hasty Touch", ko:"성급한 손길 2"}
+,{en:"Byregot's Blessing", ko:"비레고의 축복"}
+,{en:"Precise Touch", ko:"집중 가공"}
+,{en:"Byregot's Brow", ko:"비레고의 기교"}
+,{en:"Patient Touch", ko:"전념 가공"}
+,{en:"Prudent Touch", ko:"절약 가공"}
+,{en:"Initial Preparations", ko:"첫 준비"}
+,{en:"Focused Touch", ko:"주시 가공"}
+,{en:"Preparatory Touch", ko:"밑가공"}
+,{en:"Trained Eye", ko:"장인의 날랜손"}
+,{en:"Trained Instinct", ko:"장인의 억짓손"}
+// *. 기타 스킬
+,{en:"Inner Quiet", ko:"정신 집중"}
+,{en:"Steady Hand II", ko:"안정된 솜씨 2"}
+,{en:"Steady Hand", ko:"안정된 솜씨"}
+,{en:"Ingenuity II", ko:"독창적 발상 2"}
+,{en:"Ingenuity", ko:"독창적 발상"}
+,{en:"Great Strides", ko:"장족의 발전"}
+,{en:"Waste Not II", ko:"근검절약 2"}
+,{en:"Waste Not", ko:"근검절약"}
+,{en:"Innovation", ko:"혁신"}
+,{en:"Comfort Zone", ko:"작업 요령"}
+,{en:"Manipulation II", ko:"교묘한 손놀림 2"}
+,{en:"Manipulation", ko:"교묘한 손놀림"}
+,{en:"Reclaim", ko:"재활용"}
+,{en:"Master's Mend II", ko:"능숙한 땜질 2"}
+,{en:"Master's Mend", ko:"능숙한 땜질"}
+,{en:"Rumination", ko:"긴장 완화"}
+,{en:"Tricks of the Trade", ko:"비결"}
+,{en:"Observe", ko:"경과 관찰"}
+,{en:"Muscle Memory", ko:"확신"}
+,{en:"Maker's Mark", ko:"견실한 마음가짐"}
+,{en:"Reuse", ko:"재사용"}
+,{en:"Delicate Synthesis", ko:"정밀 작업"}
+// *. 전문 장인 스킬
+,{en:"Whistle While You Work", ko:"노동요"}
+,{en:"Satisfaction", ko:"보람찬 작업"}
+,{en:"Innovative Touch", ko:"혁신적 손길"}
+,{en:"Nymeia's Wheel", ko:"니메이아의 물레"}
+,{en:"Byregot's Miracle", ko:"비레고의 기적"}
+,{en:"Trained Hand", ko:"장인의 손재주"}
+,{en:"Specialty: Reflect", ko:"전문 장인의 특기: 진가"}
+,{en:"Specialty: Refurbish", ko:"전문 장인의 특기: 고요"}
+,{en:"Specialty: Reinforce", ko:"전문 장인의 특기: 재생"}
+// *. 작업 스킬
+,{en:"Basic Synthesis", ko:"작업"}
+// *. 가공 스킬
+,{en:"Basic Touch", ko:"가공"}
+// *. 커스텀
+//,{en:"<me> ", ko:""}
+//,{en:"echo Macro", ko:"ㄷ 매크로"}
+//,{en:"complete", ko:"완료"}
+];
+function exeTransEng2Kor() {
+	var txt = document.getElementById("tataru").value;
+	for(var d in data) {
+		txt = txt.split(data[d].en).join(data[d].ko);
+	}
+	document.getElementById("transKor").value = txt;
+};
+function exeTransKor2Eng() {
+	var txt = document.getElementById("transKor").value;
+	for(var d in data) {
+		txt = txt.split(data[d].ko).join(data[d].en);
+	}
+	document.getElementById("transEng").value = txt;
+};
+</script>
+
+
+<div style="float:left">
+	<b>## 타타루 영문 매크로 (입력)</b>
+	<br/>
+	<br/>
+	<textarea id="tataru" cols="55" rows="25"></textarea>
+</div>
+<div style="float:left; padding:250px 8px;">
+▶
+</div>
+<div style="float:left">
+	<b>## 한글 변환 매크로</b>
+	<br/>
+	<br/>
+	<textarea id="transKor" cols="55" rows="25" style="float:left:"></textarea>
+	<br/>
+	<input type="button" value="변환" onclick="exeTransEng2Kor()"/>
+</div>
+
+<div style="float:left; padding:250px 8px;">
+	▶
+	</div>
+	<div style="float:left">
+		<b>## 영어 변환 매크로</b>
+		<br/>
+		<br/>
+		<textarea id="transEng" cols="55" rows="25" style="float:left:"></textarea>
+		<br/>
+		<input type="button" value="변환" onclick="exeTransKor2Eng()"/>
+	</div>
+	
