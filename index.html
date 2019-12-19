@@ -4,76 +4,76 @@ input {padding:8px 18px; margin:4px 4px 4px 0px;}
 </style>
 <script>
 var data = [
-// *. ÀÛ¾÷ ½ºÅ³
-,{en:"Standard Synthesis", ko:"Áß±Ş ÀÛ¾÷"}
-,{en:"Careful Synthesis III", ko:"¸ğ¹ü ÀÛ¾÷ 3"}
-,{en:"Careful Synthesis II", ko:"¸ğ¹ü ÀÛ¾÷ 2"}
-,{en:"Careful Synthesis", ko:"¸ğ¹ü ÀÛ¾÷"}
-,{en:"Rapid Synthesis III", ko:"°­Çà ÀÛ¾÷ 3"}
-,{en:"Rapid Synthesis II", ko:"°­Çà ÀÛ¾÷ 2"}
-,{en:"Rapid Synthesis", ko:"°­Çà ÀÛ¾÷"}
-,{en:"Flawless Synthesis", ko:"°ß½ÇÇÑ ÀÛ¾÷"}
-,{en:"Piece by Piece", ko:"²ÙÁØÇÑ ÁøÃ´"}
-,{en:"Focused Synthesis", ko:"ÁÖ½Ã ÀÛ¾÷"}
-,{en:"Intensive Synthesis", ko:"ÁıÁß ÀÛ¾÷"}
-,{en:"Brand of the Elements", ko:"¿ø¼ÒÀÇ ÀÎÀå"}
-,{en:"Name of the Elements", ko:"¿ø¼ÒÀÇ ¿¹¼ú"}
-// *. °¡°ø ½ºÅ³
-,{en:"Standard Touch", ko:"Áß±Ş °¡°ø"}
-,{en:"Advanced Touch", ko:"°í±Ş °¡°ø"}
-,{en:"Hasty Touch II", ko:"¼º±ŞÇÑ ¼Õ±æ"}
-,{en:"Hasty Touch", ko:"¼º±ŞÇÑ ¼Õ±æ 2"}
-,{en:"Byregot's Blessing", ko:"ºñ·¹°íÀÇ Ãàº¹"}
-,{en:"Precise Touch", ko:"ÁıÁß °¡°ø"}
-,{en:"Byregot's Brow", ko:"ºñ·¹°íÀÇ ±â±³"}
-,{en:"Patient Touch", ko:"Àü³ä °¡°ø"}
-,{en:"Prudent Touch", ko:"Àı¾à °¡°ø"}
-,{en:"Initial Preparations", ko:"Ã¹ ÁØºñ"}
-,{en:"Focused Touch", ko:"ÁÖ½Ã °¡°ø"}
-,{en:"Preparatory Touch", ko:"¹Ø°¡°ø"}
-,{en:"Trained Eye", ko:"ÀåÀÎÀÇ ³¯·£¼Õ"}
-,{en:"Trained Instinct", ko:"ÀåÀÎÀÇ ¾ïÁş¼Õ"}
-// *. ±âÅ¸ ½ºÅ³
-,{en:"Inner Quiet", ko:"Á¤½Å ÁıÁß"}
-,{en:"Steady Hand II", ko:"¾ÈÁ¤µÈ ¼Ø¾¾ 2"}
-,{en:"Steady Hand", ko:"¾ÈÁ¤µÈ ¼Ø¾¾"}
-,{en:"Ingenuity II", ko:"µ¶Ã¢Àû ¹ß»ó 2"}
-,{en:"Ingenuity", ko:"µ¶Ã¢Àû ¹ß»ó"}
-,{en:"Great Strides", ko:"ÀåÁ·ÀÇ ¹ßÀü"}
-,{en:"Waste Not II", ko:"±Ù°ËÀı¾à 2"}
-,{en:"Waste Not", ko:"±Ù°ËÀı¾à"}
-,{en:"Innovation", ko:"Çõ½Å"}
-,{en:"Comfort Zone", ko:"ÀÛ¾÷ ¿ä·É"}
-,{en:"Manipulation II", ko:"±³¹¦ÇÑ ¼Õ³î¸² 2"}
-,{en:"Manipulation", ko:"±³¹¦ÇÑ ¼Õ³î¸²"}
-,{en:"Reclaim", ko:"ÀçÈ°¿ë"}
-,{en:"Master's Mend II", ko:"´É¼÷ÇÑ ¶«Áú 2"}
-,{en:"Master's Mend", ko:"´É¼÷ÇÑ ¶«Áú"}
-,{en:"Rumination", ko:"±äÀå ¿ÏÈ­"}
-,{en:"Tricks of the Trade", ko:"ºñ°á"}
-,{en:"Observe", ko:"°æ°ú °üÂû"}
-,{en:"Muscle Memory", ko:"È®½Å"}
-,{en:"Maker's Mark", ko:"°ß½ÇÇÑ ¸¶À½°¡Áü"}
-,{en:"Reuse", ko:"Àç»ç¿ë"}
-,{en:"Delicate Synthesis", ko:"Á¤¹Ğ ÀÛ¾÷"}
-// *. Àü¹® ÀåÀÎ ½ºÅ³
-,{en:"Whistle While You Work", ko:"³ëµ¿¿ä"}
-,{en:"Satisfaction", ko:"º¸¶÷Âù ÀÛ¾÷"}
-,{en:"Innovative Touch", ko:"Çõ½ÅÀû ¼Õ±æ"}
-,{en:"Nymeia's Wheel", ko:"´Ï¸ŞÀÌ¾ÆÀÇ ¹°·¹"}
-,{en:"Byregot's Miracle", ko:"ºñ·¹°íÀÇ ±âÀû"}
-,{en:"Trained Hand", ko:"ÀåÀÎÀÇ ¼ÕÀçÁÖ"}
-,{en:"Specialty: Reflect", ko:"Àü¹® ÀåÀÎÀÇ Æ¯±â: Áø°¡"}
-,{en:"Specialty: Refurbish", ko:"Àü¹® ÀåÀÎÀÇ Æ¯±â: °í¿ä"}
-,{en:"Specialty: Reinforce", ko:"Àü¹® ÀåÀÎÀÇ Æ¯±â: Àç»ı"}
-// *. ÀÛ¾÷ ½ºÅ³
-,{en:"Basic Synthesis", ko:"ÀÛ¾÷"}
-// *. °¡°ø ½ºÅ³
-,{en:"Basic Touch", ko:"°¡°ø"}
-// *. Ä¿½ºÅÒ
+// *. ì‘ì—… ìŠ¤í‚¬
+,{en:"Standard Synthesis", ko:"ì¤‘ê¸‰ ì‘ì—…"}
+,{en:"Careful Synthesis III", ko:"ëª¨ë²” ì‘ì—… 3"}
+,{en:"Careful Synthesis II", ko:"ëª¨ë²” ì‘ì—… 2"}
+,{en:"Careful Synthesis", ko:"ëª¨ë²” ì‘ì—…"}
+,{en:"Rapid Synthesis III", ko:"ê°•í–‰ ì‘ì—… 3"}
+,{en:"Rapid Synthesis II", ko:"ê°•í–‰ ì‘ì—… 2"}
+,{en:"Rapid Synthesis", ko:"ê°•í–‰ ì‘ì—…"}
+,{en:"Flawless Synthesis", ko:"ê²¬ì‹¤í•œ ì‘ì—…"}
+,{en:"Piece by Piece", ko:"ê¾¸ì¤€í•œ ì§„ì²™"}
+,{en:"Focused Synthesis", ko:"ì£¼ì‹œ ì‘ì—…"}
+,{en:"Intensive Synthesis", ko:"ì§‘ì¤‘ ì‘ì—…"}
+,{en:"Brand of the Elements", ko:"ì›ì†Œì˜ ì¸ì¥"}
+,{en:"Name of the Elements", ko:"ì›ì†Œì˜ ì˜ˆìˆ "}
+// *. ê°€ê³µ ìŠ¤í‚¬
+,{en:"Standard Touch", ko:"ì¤‘ê¸‰ ê°€ê³µ"}
+,{en:"Advanced Touch", ko:"ê³ ê¸‰ ê°€ê³µ"}
+,{en:"Hasty Touch II", ko:"ì„±ê¸‰í•œ ì†ê¸¸"}
+,{en:"Hasty Touch", ko:"ì„±ê¸‰í•œ ì†ê¸¸ 2"}
+,{en:"Byregot's Blessing", ko:"ë¹„ë ˆê³ ì˜ ì¶•ë³µ"}
+,{en:"Precise Touch", ko:"ì§‘ì¤‘ ê°€ê³µ"}
+,{en:"Byregot's Brow", ko:"ë¹„ë ˆê³ ì˜ ê¸°êµ"}
+,{en:"Patient Touch", ko:"ì „ë… ê°€ê³µ"}
+,{en:"Prudent Touch", ko:"ì ˆì•½ ê°€ê³µ"}
+,{en:"Initial Preparations", ko:"ì²« ì¤€ë¹„"}
+,{en:"Focused Touch", ko:"ì£¼ì‹œ ê°€ê³µ"}
+,{en:"Preparatory Touch", ko:"ë°‘ê°€ê³µ"}
+,{en:"Trained Eye", ko:"ì¥ì¸ì˜ ë‚ ëœì†"}
+,{en:"Trained Instinct", ko:"ì¥ì¸ì˜ ì–µì§“ì†"}
+// *. ê¸°íƒ€ ìŠ¤í‚¬
+,{en:"Inner Quiet", ko:"ì •ì‹  ì§‘ì¤‘"}
+,{en:"Steady Hand II", ko:"ì•ˆì •ëœ ì†œì”¨ 2"}
+,{en:"Steady Hand", ko:"ì•ˆì •ëœ ì†œì”¨"}
+,{en:"Ingenuity II", ko:"ë…ì°½ì  ë°œìƒ 2"}
+,{en:"Ingenuity", ko:"ë…ì°½ì  ë°œìƒ"}
+,{en:"Great Strides", ko:"ì¥ì¡±ì˜ ë°œì „"}
+,{en:"Waste Not II", ko:"ê·¼ê²€ì ˆì•½ 2"}
+,{en:"Waste Not", ko:"ê·¼ê²€ì ˆì•½"}
+,{en:"Innovation", ko:"í˜ì‹ "}
+,{en:"Comfort Zone", ko:"ì‘ì—… ìš”ë ¹"}
+,{en:"Manipulation II", ko:"êµë¬˜í•œ ì†ë†€ë¦¼ 2"}
+,{en:"Manipulation", ko:"êµë¬˜í•œ ì†ë†€ë¦¼"}
+,{en:"Reclaim", ko:"ì¬í™œìš©"}
+,{en:"Master's Mend II", ko:"ëŠ¥ìˆ™í•œ ë•œì§ˆ 2"}
+,{en:"Master's Mend", ko:"ëŠ¥ìˆ™í•œ ë•œì§ˆ"}
+,{en:"Rumination", ko:"ê¸´ì¥ ì™„í™”"}
+,{en:"Tricks of the Trade", ko:"ë¹„ê²°"}
+,{en:"Observe", ko:"ê²½ê³¼ ê´€ì°°"}
+,{en:"Muscle Memory", ko:"í™•ì‹ "}
+,{en:"Maker's Mark", ko:"ê²¬ì‹¤í•œ ë§ˆìŒê°€ì§"}
+,{en:"Reuse", ko:"ì¬ì‚¬ìš©"}
+,{en:"Delicate Synthesis", ko:"ì •ë°€ ì‘ì—…"}
+// *. ì „ë¬¸ ì¥ì¸ ìŠ¤í‚¬
+,{en:"Whistle While You Work", ko:"ë…¸ë™ìš”"}
+,{en:"Satisfaction", ko:"ë³´ëŒì°¬ ì‘ì—…"}
+,{en:"Innovative Touch", ko:"í˜ì‹ ì  ì†ê¸¸"}
+,{en:"Nymeia's Wheel", ko:"ë‹ˆë©”ì´ì•„ì˜ ë¬¼ë ˆ"}
+,{en:"Byregot's Miracle", ko:"ë¹„ë ˆê³ ì˜ ê¸°ì "}
+,{en:"Trained Hand", ko:"ì¥ì¸ì˜ ì†ì¬ì£¼"}
+,{en:"Specialty: Reflect", ko:"ì „ë¬¸ ì¥ì¸ì˜ íŠ¹ê¸°: ì§„ê°€"}
+,{en:"Specialty: Refurbish", ko:"ì „ë¬¸ ì¥ì¸ì˜ íŠ¹ê¸°: ê³ ìš”"}
+,{en:"Specialty: Reinforce", ko:"ì „ë¬¸ ì¥ì¸ì˜ íŠ¹ê¸°: ì¬ìƒ"}
+// *. ì‘ì—… ìŠ¤í‚¬
+,{en:"Basic Synthesis", ko:"ì‘ì—…"}
+// *. ê°€ê³µ ìŠ¤í‚¬
+,{en:"Basic Touch", ko:"ê°€ê³µ"}
+// *. ì»¤ìŠ¤í…€
 //,{en:"<me> ", ko:""}
-//,{en:"echo Macro", ko:"¤§ ¸ÅÅ©·Î"}
-//,{en:"complete", ko:"¿Ï·á"}
+//,{en:"echo Macro", ko:"ã„· ë§¤í¬ë¡œ"}
+//,{en:"complete", ko:"ì™„ë£Œ"}
 ];
 function exeTransEng2Kor() {
 	var txt = document.getElementById("tataru").value;
@@ -93,32 +93,32 @@ function exeTransKor2Eng() {
 
 
 <div style="float:left">
-	<b>## Å¸Å¸·ç ¿µ¹® ¸ÅÅ©·Î (ÀÔ·Â)</b>
+	<b>## íƒ€íƒ€ë£¨ ì˜ë¬¸ ë§¤í¬ë¡œ (ì…ë ¥)</b>
 	<br/>
 	<br/>
 	<textarea id="tataru" cols="55" rows="25"></textarea>
 </div>
 <div style="float:left; padding:250px 8px;">
-¢º
+â–¶
 </div>
 <div style="float:left">
-	<b>## ÇÑ±Û º¯È¯ ¸ÅÅ©·Î</b>
+	<b>## í•œê¸€ ë³€í™˜ ë§¤í¬ë¡œ</b>
 	<br/>
 	<br/>
 	<textarea id="transKor" cols="55" rows="25" style="float:left:"></textarea>
 	<br/>
-	<input type="button" value="º¯È¯" onclick="exeTransEng2Kor()"/>
+	<input type="button" value="ë³€í™˜" onclick="exeTransEng2Kor()"/>
 </div>
 
 <div style="float:left; padding:250px 8px;">
-	¢º
+	â–¶
 	</div>
 	<div style="float:left">
-		<b>## ¿µ¾î º¯È¯ ¸ÅÅ©·Î</b>
+		<b>## ì˜ì–´ ë³€í™˜ ë§¤í¬ë¡œ</b>
 		<br/>
 		<br/>
 		<textarea id="transEng" cols="55" rows="25" style="float:left:"></textarea>
 		<br/>
-		<input type="button" value="º¯È¯" onclick="exeTransKor2Eng()"/>
+		<input type="button" value="ë³€í™˜" onclick="exeTransKor2Eng()"/>
 	</div>
 	
