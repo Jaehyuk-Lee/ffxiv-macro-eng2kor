@@ -34,16 +34,26 @@
 		div#note>ul>ul{
 			font-size: 10pt;
 		}
+		div#footer{
+			position: absolute;
+			bottom: 10px;
+		}
+		div#contact>p{
+			margin: 8px 0px;
+		}
+		div#contact>p::before{
+			width: 10px;
+			height: 50px;
+			margin-right: 5px;
+			background: blue;
+			content: "-";
+		}
 	</style>
 	<script>
 		var data = [
 		// *. 작업 스킬
 		,{en:"Standard Synthesis", ko:"중급 작업"}
-		,{en:"Careful Synthesis III", ko:"모범 작업 3"}
-		,{en:"Careful Synthesis II", ko:"모범 작업 2"}
 		,{en:"Careful Synthesis", ko:"모범 작업"}
-		,{en:"Rapid Synthesis III", ko:"강행 작업 3"}
-		,{en:"Rapid Synthesis II", ko:"강행 작업 2"}
 		,{en:"Rapid Synthesis", ko:"강행 작업"}
 		,{en:"Flawless Synthesis", ko:"견실한 작업"}
 		,{en:"Piece by Piece", ko:"꾸준한 진척"}
@@ -53,55 +63,34 @@
 		,{en:"Name of the Elements", ko:"원소의 예술"}
 		// *. 가공 스킬
 		,{en:"Standard Touch", ko:"중급 가공"}
-		,{en:"Advanced Touch", ko:"고급 가공"}
-		,{en:"Hasty Touch II", ko:"성급한 손길"}
-		,{en:"Hasty Touch", ko:"성급한 손길 2"}
+		,{en:"Hasty Touch", ko:"성급한 손길"}
 		,{en:"Byregot's Blessing", ko:"비레고의 축복"}
 		,{en:"Precise Touch", ko:"집중 가공"}
 		,{en:"Byregot's Brow", ko:"비레고의 기교"}
 		,{en:"Patient Touch", ko:"전념 가공"}
 		,{en:"Prudent Touch", ko:"절약 가공"}
-		,{en:"Initial Preparations", ko:"첫 준비"}
 		,{en:"Focused Touch", ko:"주시 가공"}
 		,{en:"Preparatory Touch", ko:"밑가공"}
 		,{en:"Trained Eye", ko:"장인의 날랜손"}
 		,{en:"Trained Instinct", ko:"장인의 억짓손"}
 		// *. 기타 스킬
 		,{en:"Inner Quiet", ko:"정신 집중"}
-		,{en:"Steady Hand II", ko:"안정된 솜씨 2"}
-		,{en:"Steady Hand", ko:"안정된 솜씨"}
-		,{en:"Ingenuity II", ko:"독창적 발상 2"}
+		,{en:"Reflect", ko:"진가"}
 		,{en:"\"Ingenuity\"", ko:"\"독창적 발상\""}
 		,{en:"Ingenuity", ko:"\"독창적 발상\""}
 		,{en:"Great Strides", ko:"장족의 발전"}
-		,{en:"Waste Not II", ko:"근검절약 2"}
+		,{en:"Waste Not II", ko:"장기 절약"}
 		,{en:"Waste Not", ko:"근검절약"}
 		,{en:"Innovation", ko:"혁신"}
-		,{en:"Comfort Zone", ko:"작업 요령"}
-		,{en:"Manipulation II", ko:"교묘한 손놀림 2"}
 		,{en:"\"Manipulation\"", ko:"\"교묘한 손놀림\""}
 		,{en:"Manipulation", ko:"\"교묘한 손놀림\""}
-		,{en:"Reclaim", ko:"재활용"}
-		,{en:"Master's Mend II", ko:"능숙한 땜질 2"}
 		,{en:"Master's Mend", ko:"능숙한 땜질"}
-		,{en:"Rumination", ko:"긴장 완화"}
 		,{en:"Tricks of the Trade", ko:"비결"}
 		,{en:"\"Observe\"", ko:"\"경과 관찰\""}
 		,{en:"Observe", ko:"\"경과 관찰\""}
 		,{en:"Muscle Memory", ko:"확신"}
-		,{en:"Maker's Mark", ko:"견실한 마음가짐"}
 		,{en:"Reuse", ko:"재사용"}
 		,{en:"Delicate Synthesis", ko:"정밀 작업"}
-		// *. 전문 장인 스킬
-		,{en:"Whistle While You Work", ko:"노동요"}
-		,{en:"Satisfaction", ko:"보람찬 작업"}
-		,{en:"Innovative Touch", ko:"혁신적 손길"}
-		,{en:"Nymeia's Wheel", ko:"니메이아의 물레"}
-		,{en:"Byregot's Miracle", ko:"비레고의 기적"}
-		,{en:"Trained Hand", ko:"장인의 손재주"}
-		,{en:"Specialty: Reflect", ko:"전문 장인의 특기: 진가"}
-		,{en:"Specialty: Refurbish", ko:"전문 장인의 특기: 고요"}
-		,{en:"Specialty: Reinforce", ko:"전문 장인의 특기: 재생"}
 		// *. 작업 스킬
 		,{en:"Basic Synthesis", ko:"작업"}
 		// *. 가공 스킬
@@ -128,9 +117,7 @@
 	</script>
 </head>
 <body>
-	
-		
-		
+	<div id="body">
 		<div class="input">
 			<b>## 영문 매크로 (입력)</b>
 			<br/>
@@ -161,7 +148,7 @@
 			<input type="button" value="영어로 변환" onclick="exeTransKor2Eng()"/>
 		</div>
 		<div class="updates">
-			<div id="version"> 현재 버전 : <span id="version">v5.01</span></div>
+			<div id="version"> 현재 버전 : <span id="version">v5.1</span></div>
 			<div id="note">
 				<div id="note-title"> 패치 노트 </div>
 				<ul>
@@ -184,8 +171,19 @@
 					<ul>
 						<li>영어 스킬 이름이 한 단어지만 한글 이름은 두 단어 이상일 때 큰 따옴표로 새로 묶어주는 기능 추가.</li>
 					</ul>
+					<li>v5.1</li>
+					<ul>
+						<li>5.1 패치에 삭제/추가된 스킬 내역 반영</li>
+					</ul>
 				</ul>
 			</div>
 		</div>
+	</div>
+	<div id="footer">
+		<div id="contact">
+			<p><a href="https://github.com/Jaehyuk-Lee/ffxiv-macro-eng2kor" target="_blank">깃헙 프로젝트 링크</a></p>
+			<p>개발자 이메일: windowsce0728@gmail.com</p>
+		</div>
+	</div>
 </body>
 </html>
